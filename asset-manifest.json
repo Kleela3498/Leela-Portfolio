@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Leela-Portfolio/static/css/main.a2957605.css",
+    "main.js": "/Leela-Portfolio/static/js/main.448c6fa1.js",
+    "static/js/453.f4fbaa6d.chunk.js": "/Leela-Portfolio/static/js/453.f4fbaa6d.chunk.js",
+    "static/media/northern-ligths.jpg": "/Leela-Portfolio/static/media/northern-ligths.6dbcc809f16aa6bfb93f.jpg",
+    "index.html": "/Leela-Portfolio/index.html",
+    "main.a2957605.css.map": "/Leela-Portfolio/static/css/main.a2957605.css.map",
+    "main.448c6fa1.js.map": "/Leela-Portfolio/static/js/main.448c6fa1.js.map",
+    "453.f4fbaa6d.chunk.js.map": "/Leela-Portfolio/static/js/453.f4fbaa6d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a2957605.css",
+    "static/js/main.448c6fa1.js"
+  ]
+}
