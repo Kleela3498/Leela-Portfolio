@@ -1,0 +1,202 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  background: transparent;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  padding: 0 20px;
+}
+
+.navbar.scrolled {
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #64ffda;
+  text-shadow: 
+    0 0 10px rgba(100, 255, 218, 0.5),
+    0 0 20px rgba(100, 255, 218, 0.3);
+  transition: all 0.3s ease;
+}
+
+.navbar-logo a:hover {
+  text-shadow: 
+    0 0 15px rgba(100, 255, 218, 0.7),
+    0 0 30px rgba(100, 255, 218, 0.5);
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.star-counter {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 8px 16px;
+  background: rgba(100, 255, 218, 0.1);
+  border-radius: 20px;
+  color: #64ffda;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.star-icon {
+  animation: starTwinkle 1.5s infinite;
+}
+
+.star-count {
+  font-weight: 600;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #64ffda;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 5px 0;
+  font-size: 1.1rem;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #64ffda, transparent);
+  transition: width 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #64ffda;
+  text-shadow: 
+    0 0 10px rgba(100, 255, 218, 0.5),
+    0 0 20px rgba(100, 255, 218, 0.3);
+}
+
+.navbar-links a:hover::after {
+  width: 100%;
+}
+
+@keyframes starTwinkle {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(0.9);
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-right {
+    gap: 1rem;
+  }
+
+  .menu-toggle {
+    display: block;
+    z-index: 1001;
+  }
+
+  .navbar.menu-open {
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+  }
+
+  .navbar-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    transition: right 0.3s ease;
+    padding: 2rem;
+  }
+
+  .navbar-links.active {
+    right: 0;
+  }
+
+  .navbar-links a {
+    font-size: 1.3rem;
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar-links a::after {
+    display: none;
+  }
+
+  .navbar-links a:hover {
+    background: rgba(100, 255, 218, 0.1);
+    border-radius: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0 15px;
+  }
+
+  .navbar-logo a {
+    font-size: 1.2rem;
+  }
+
+  .star-counter {
+    font-size: 1rem;
+    padding: 6px 12px;
+  }
+
+  .navbar-links a {
+    font-size: 1.2rem;
+  }
+} 
+
+

@@ -1,0 +1,44 @@
+.cursor-dot,
+.cursor-outline {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+  z-index: 9999;
+}
+
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #64ffda;
+  border-radius: 50%;
+  margin: -4px 0 0 -4px;
+  transition: opacity 0.15s ease-in-out;
+  opacity: 1;
+}
+
+.cursor-outline {
+  width: 40px;
+  height: 40px;
+  border: 2px solid rgba(100, 255, 218, 0.5);
+  border-radius: 50%;
+  margin: -20px 0 0 -20px;
+  transition: all 0.15s ease-in-out;
+}
+
+.cursor-outline.pointer {
+  width: 50px;
+  height: 50px;
+  margin: -25px 0 0 -25px;
+  background-color: rgba(100, 255, 218, 0.1);
+  border-color: rgba(100, 255, 218, 0.8);
+}
+
+@media (max-width: 768px) {
+  .cursor-dot,
+  .cursor-outline {
+    display: none;
+  }
+} 
